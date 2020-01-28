@@ -304,6 +304,7 @@
 	.next_match_guest
 	{
 		height: 60px;
+		min-width:60%;
 	}
 	.next_match_guest a,
 	.next_match_home a
