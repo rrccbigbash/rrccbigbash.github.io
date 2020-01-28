@@ -173,11 +173,20 @@
 	{
 		font-size: 36px;
 	}
-	.bigname_home{
+	.bigname_home, .bigname_home_2{
 		margin-bottom:-12px;
+	}
+	.bigname_home_2
+	{
+		padding-bottom:31px !important;
 	}
 	.bigname_home .result_num{
 		margin-left:-30px;
+	}
+	.bigname_home_2 .result_team
+	{
+		margin-left:-10px;
+		line-height:0.85;
 	}
 	.result_team
 	{

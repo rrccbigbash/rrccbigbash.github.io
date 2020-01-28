@@ -252,26 +252,27 @@ $(document).ready(function()
 	
 	function initHeroBanner(){
 		var schedule=[]
+		var sunSchedule=[]
 		schedule.push({'Date' : new Date('2020','00','25'),'Home' : 'Nightmare','Away' : 'RealRaccoons'});
-		schedule.push({'Date' : new Date('2020','00','26'),'Home' : 'Mighty Tigers','Away' : 'Ball Busters'});
+		sunSchedule.push({'Date' : new Date('2020','00','26'),'Home' : 'Mighty Tigers','Away' : 'Ball Busters'});
 		schedule.push({'Date' : new Date('2020','01','01'),'Home' : 'Real Raccoons','Away' : 'Mighty Tigers'});
-		schedule.push({'Date' : new Date('2020','01','02'),'Home' : 'Dragons','Away' : 'Nightmare'});
+		sunSchedule.push({'Date' : new Date('2020','01','02'),'Home' : 'Dragons','Away' : 'Nightmare'});
 		schedule.push({'Date' : new Date('2020','01','08'),'Home' : 'Mighty Tigers','Away' : 'Dragons'});
-		schedule.push({'Date' : new Date('2020','01','09'),'Home' : 'Ball Busters','Away' : 'Real RealRaccoons'});
+		sunSchedule.push({'Date' : new Date('2020','01','09'),'Home' : 'Ball Busters','Away' : 'Real RealRaccoons'});
 		schedule.push({'Date' : new Date('2020','01','15'),'Home' : 'Ball Busters','Away' : 'Dragons'});
-		schedule.push({'Date' : new Date('2020','01','16'),'Home' : 'Mighty Tigers','Away' : 'Nightmare'});
+		sunSchedule.push({'Date' : new Date('2020','01','16'),'Home' : 'Mighty Tigers','Away' : 'Nightmare'});
 		schedule.push({'Date' : new Date('2020','01','22'),'Home' : 'Nightmare','Away' : 'Ball Busters'});
-		schedule.push({'Date' : new Date('2020','01','23'),'Home' : 'Dragons','Away' : 'Real RealRaccoons'});
+		sunSchedule.push({'Date' : new Date('2020','01','23'),'Home' : 'Dragons','Away' : 'Real RealRaccoons'});
 		schedule.push({'Date' : new Date('2020','01','29'),'Home' : 'Ball Busters','Away' : 'Mighty Tigers'});
-		schedule.push({'Date' : new Date('2020','02','01'),'Home' : 'Real Raccoons','Away' : 'Nightmare'});
+		sunSchedule.push({'Date' : new Date('2020','02','01'),'Home' : 'Real Raccoons','Away' : 'Nightmare'});
 		schedule.push({'Date' : new Date('2020','02','07'),'Home' : 'Nightmare','Away' : 'Dragons'});
-		schedule.push({'Date' : new Date('2020','02','08'),'Home' : 'Mighty Tigers','Away' : 'Real RealRaccoons'});
+		sunSchedule.push({'Date' : new Date('2020','02','08'),'Home' : 'Mighty Tigers','Away' : 'Real RealRaccoons'});
 		schedule.push({'Date' : new Date('2020','02','14'),'Home' : 'Real Raccoons','Away' : 'Ball Busters'});
-		schedule.push({'Date' : new Date('2020','02','15'),'Home' : 'Dragons','Away' : 'Mighty Tigers'});
+		sunSchedule.push({'Date' : new Date('2020','02','15'),'Home' : 'Dragons','Away' : 'Mighty Tigers'});
 		schedule.push({'Date' : new Date('2020','02','21'),'Home' : 'Nightmare','Away' : 'Mighty Tigers'});
-		schedule.push({'Date' : new Date('2020','02','22'),'Home' : 'Dragons','Away' : 'Ball Busters'});
+		sunSchedule.push({'Date' : new Date('2020','02','22'),'Home' : 'Dragons','Away' : 'Ball Busters'});
 		schedule.push({'Date' : new Date('2020','02','28'),'Home' : 'Real Raccoons','Away' : 'Dragons'});
-		schedule.push({'Date' : new Date('2020','02','29'),'Home' : 'Ball Busters','Away' : 'Nightmare'});
+		sunSchedule.push({'Date' : new Date('2020','02','29'),'Home' : 'Ball Busters','Away' : 'Nightmare'});
 		schedule.push({'Date' : new Date('2020','03','04'),'Home' : 'TBD','Away' : 'TBD'});
 		schedule.push({'Date' : new Date('2020','03','11'),'Home' : 'TBD','Away' : 'TBD'});
 		
@@ -280,7 +281,6 @@ $(document).ready(function()
 		{
 			if(schedule[i]['Date']>(new Date()))
 			{
-				console.log("Closest is "+schedule[i]);
 				var timeDiff=Math.abs(schedule[i]['Date'] - (new Date()))
 				$(".no_days").text(Math.ceil(timeDiff / (1000 * 60 * 60 * 24)));
 				$(".home_team").text(schedule[i]['Home']);
@@ -289,7 +289,17 @@ $(document).ready(function()
 			}
 		}
 		
-		console.log(schedule);
+		for(i=0;i<sunSchedule.length;i++)
+		{
+			if(sunSchedule[i]['Date']>(new Date()))
+			{
+				var timeDiff=Math.abs(sunSchedule[i]['Date'] - (new Date()))
+				$(".no_days_sun").text(Math.ceil(timeDiff / (1000 * 60 * 60 * 24)));
+				$(".home_team_sun").text(sunSchedule[i]['Home']);
+				$(".away_team_sun").text(sunSchedule[i]['Away']);
+				break;
+			}
+		}
 	}
 	
 	
