@@ -831,6 +831,12 @@ section
 	#padding-top: 100px;
 	padding-bottom: 35px;
 }
+.stats .row{
+	padding-top: 43px;
+}
+.stats .row .col{
+	text-align:center;
+}
 .team_large_row
 {
 	margin-top: 100px;
