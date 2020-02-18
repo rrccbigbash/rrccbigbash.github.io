@@ -406,9 +406,9 @@
 	{
 		display: none;
 	}
-	.main_nav_container_outer
+	.main_nav_container_outer,.main_nav_container_outer_live
 	{
-		height: 90px;
+		height: 90px !important;
 	}
 	.header.scrolled .main_nav_container_outer
 	{

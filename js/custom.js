@@ -32,6 +32,7 @@ $(document).ready(function()
 	initNewsSlider();
 	initMilestones();
 	initHeroBanner();
+	initLive();
 
 	$(window).on('resize', function()
 	{
@@ -300,6 +301,36 @@ $(document).ready(function()
 				break;
 			}
 		}
+	}
+	
+	function initLive()
+	{
+		var d = new Date();
+		var live=false;
+		
+		if(d.getDay() == 1 || d.getDay() == 6)
+		{
+			if(d.toTimeString().substring(0,2) >= 8 && d.toTimeString().substring(0,2) <= 12 )
+			{
+				live = true;
+				if(d.toTimeString().substring(0,2) == 12)
+				{
+					if(d.toTimeString().substring(3,5) > 30)
+					{
+						live = false;
+					}
+				}
+			}
+		}
+		
+		if(live)
+		{
+			/* */
+			$(".header_bar").removeClass("header_live_hide");
+			$(".header_live").removeClass("header_live_hide");
+			$(".main_nav_container_outer").addClass("main_nav_container_outer_live");
+		}
+
 	}
 	
 	

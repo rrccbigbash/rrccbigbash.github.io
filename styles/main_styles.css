@@ -342,7 +342,7 @@ section
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: #553b83;
+	background: rgba(85,59,131,0.75);
 	#background: rgba(22,29,74,0.75);
 	z-index: 100;
 	border-bottom: solid 3px #ffa54b;
@@ -356,9 +356,17 @@ section
 	width: 100%;
 	height: 88px;
 }
+.main_nav_container_outer_live
+{
+	height: 130px !important;
+}
 .header.scrolled .main_nav_container_outer
 {
 	height: 68px;
+}
+.header.scrolled .main_nav_container_outer_live
+{
+	height: 94px !important;
 }
 .header.scrolled .logo_container > div
 {
@@ -371,7 +379,10 @@ section
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: rgba(28,36,93,0.75);
+	background: rgba(85,59,131,0.85);
+}
+.header_bar container{
+	max-width:858px;
 }
 .header_bar_content
 {
@@ -424,6 +435,10 @@ section
 .user_area ul li a:hover
 {
 	color: #ffa54b;
+}
+.main_nav .main_nav_container .header_live_hide,.header_live_hide
+{
+	display: none !important;
 }
 .header_live a > div > div:first-child
 {
