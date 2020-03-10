@@ -1,0 +1,44 @@
+.statstable td, .statstable th {
+  border: 1px solid #ffffff;
+  padding: 8px;
+  color: #FFFFFF;
+}
+
+.statstable tr:nth-child(odd){background-color: #553b83;}
+.statstable tr:nth-child(even){background-color: #242b56;}
+
+
+.statstable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #ffa54b;
+}
+
+.pointstable
+{
+	margin-top: 25px;
+}
+
+.pointstable th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ffa54b;
+}
+
+.pointstable td, .pointstable th {
+  padding: 8px;
+  color: #FFFFFF;
+}
+
+.pointstable tr:nth-child(1),.pointstable tr:nth-child(2),.pointstable tr:nth-child(3){background-color: #242b56;}
+.pointstable tr:nth-child(4),.pointstable tr:nth-child(5){background-color: #553b83;}
+
+.pointstable tr .qualified
+{
+	font-weight: 700;
+    font-size: 15px;
+    color: #ffa54b;
+    text-align: right;
+}
